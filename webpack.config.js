@@ -1,11 +1,36 @@
+const path = require("path");
+const webpack = require('webpack');
+
 module.exports = {
-    entry: './js/app.js',
+    entry: path.join(__dirname, "js", "index.js"),
+    module: {
+        rules: [
+          {
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: {
+              loader: "babel-loader"
+            }
+          },
+          {
+            test: /\.s?css$/,
+            use: ['style-loader', 'css-loader', 'sass-loader']
+          }
+        ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
     output: {
-      path: path.join(__dirname, 'public'),
-      publicPath: '/',
-      filename: 'bundle.js',
-    },
+        path: path.join(__dirname, "public"),
+        filename: "bundle.js",
+        publicPath: "/"
+    }, 
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devServer: {
-      contentBase: './dist',
-    },
-  };
+        hot: true,
+        historyApiFallback: true
+    }
+};
