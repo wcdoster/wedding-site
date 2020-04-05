@@ -17,7 +17,8 @@ export default class Map extends React.Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{
-                        key: 'AIzaSyCCiCnNy4_B7ZadX2DhCxSVNqCmADRt2EA',
+                        //API key is deprecated
+                        key: '',
                         language: 'en'
                     }
                     }
