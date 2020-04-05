@@ -1,0 +1,194 @@
+
+*{
+    font-family: "Hammersmith One";
+    text-transform: uppercase;
+    background-color: #fffefc;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+html{
+    padding:0
+}
+
+#router {
+    display: flex;
+    flex-direction: row;
+}
+
+#root-link{
+    text-decoration: none;
+    color: black
+}
+
+#App{
+    width: 100%
+}
+
+#page{
+    width: 100%;
+    margin: 0;
+    margin-right: 10%;
+    /* height: 100%;
+    overflow-y: scoll; */
+}
+
+#title{
+    font-size: 4em;
+    text-align: left;
+    width: 83%;
+    padding-left: 17%;
+    margin-bottom:0;
+    padding-bottom: 40px;
+    margin-top:0;
+    padding-top: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* 
+#root-link{
+    width: 100vw;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+} */
+
+#mainPagePicture{
+    width: 50%;
+    justify-content: center;
+    transform: rotate(90deg);
+    margin-left: 25%;
+    margin-top: 10%;
+}
+#venue-pics{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20vh;
+}
+
+#main-page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* class styling */
+.heading{
+    width: 100vw
+}
+
+.pageHeader {
+    text-align: center;
+}
+
+.page{
+    width: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+  }
+
+.details{
+    text-align: center;
+}
+
+.picture{
+    height: 100%;
+    transition: height .5s ease;
+    z-index: 10;
+}
+
+.main-pic{
+    height: 40vh;
+    margin-bottom: 10px;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    z-index: inherit;
+}
+
+.transition{
+    text-align: center;
+}
+
+@media screen and (min-width: 601px){
+    .picture:hover{
+        height: 350px;
+        z-index: 100;
+    }
+    .main-pic:hover{
+        transform: scale(1.5, 1.5);
+-webkit-transform: scale(1.5, 1.5);
+-moz-transform: scale(1.5, 1.5);
+-o-transform: scale(1.5, 1.5);
+    }
+    .transition:hover{
+        z-index: 10000000;
+    }
+}
+
+
+@media screen and (max-width: 448px){
+    #title{
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 900px){
+    li{
+        margin-top: 90px
+    }
+}
+
+@media screen and (max-width: 800px){
+    #router{
+        flex-direction: column;
+    }
+    #page{
+        width: 100%;
+        margin-right: 0;
+    }
+    #title{
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #venue-pics {
+        flex-direction: column;
+        height: auto;
+    }
+    .picture{
+        height: auto;
+        width: 90%;
+        transition:none;
+        margin-left: 5%;
+    }
+    .main-pic{
+        max-width: 90%;
+        max-height: 250px
+    }
+    
+}
+
+@media screen and (max-width: 900px){
+    .main-pic{
+        height: 30vh;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { HashRouter, Switch, Route, Link } from 'react-router-dom'
 
 //Components
 import NavBar from './components/NavBar'
@@ -8,6 +8,10 @@ import Details from './components/Details'
 import OurStory from './components/OurStory'
 import Registry from './components/Registry'
 import RSVP from './components/RSVP'
+import MainPage from './components/MainPage'
+
+//style
+import './style/app.css'
 
 
 export default class App extends React.Component {
@@ -17,7 +21,7 @@ export default class App extends React.Component {
         this.setPage = this.setPage.bind(this)
 
         this.state = {
-            page: "OurStory"
+            page: "OurStory",
         }
 
     }
@@ -44,29 +48,31 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
-                Meg and Cole
-                  <BrowserRouter>
-                    <NavBar />
-                    <Switch>
-                        <Route path="/ourstory">
-                            <OurStory />
-                        </Route>
-                        <Route path="/details">
-                            <Details />
-                        </Route>
-                        <Route path="/registry">
-                            <Registry />
-                        </Route>
-                        <Route path="/rsvp">
-                            <RSVP />
-                        </Route>
-                        <Route path="/">
-                            <div>
-                                <h2>Main Page</h2>
-                            </div>
-                        </Route>
-                    </Switch>
-                </BrowserRouter>
+                <HashRouter>
+                    <h1 id="title"><Link id='root-link' to='/'>Meg and Cole</Link></h1>
+                    <div id="router">
+                        <NavBar />
+                        <div id="page">
+                            <Switch>
+                                <Route path="/ourstory">
+                                    <OurStory />
+                                </Route>
+                                <Route path="/details">
+                                    <Details />
+                                </Route>
+                                <Route path="/registry">
+                                    <Registry />
+                                </Route>
+                                <Route path="/rsvp">
+                                    <RSVP />
+                                </Route>
+                                <Route path="/">
+                                    <MainPage />
+                                </Route>
+                            </Switch>
+                        </div>
+                    </div>
+                </HashRouter>
             </div>
         );
     }
