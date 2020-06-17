@@ -1,0 +1,53 @@
+
+.registryCard{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+    height: 25vw;
+    min-height: 250px;
+    max-height: 280px;
+    min-width: 340px;
+    /* max-width: 90vw; */
+    margin-bottom: 10px;
+}
+
+.registryCard>a{
+    text-decoration: none;
+}
+
+.registryCard>a>div{
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    max-width: 90vw;
+}
+
+.registryCard>a>div>img{
+    height: 80%;
+    width: auto;
+    vertical-align: bottom;
+    border: 0
+}
+
+.registryCard>a>div>p{
+    text-decoration: none;
+    color: black
+}
+
+.registryCard>h4{
+    text-decoration: none;
+    color:black;
+    font-size: 2em;
+    vertical-align: bottom;
+}
+
+.registryCard>h4>a{
+    text-decoration: none;
+    color:black;
+}
+
+#registryCards{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

@@ -72,13 +72,10 @@ export default class NavBar extends React.Component {
                         // }}
                         // onMouseLeave={(e) => { e.target.style.fontSize = '1em' }}
                         className={this.state.details} to="/details">Details</Link></li>
-                    {/* <li><Link onClick={() => { this.setPage('registry') }}
-                    onTouchStart={(e)=>{e.target.style.fontSize = '1em'}}
-                        onMouseOver={(e) => { if(e.type !== 'touchStart'){
-                            e.target.style.fontSize = '1.5em' }}}
-                        onMouseLeave={(e) => { e.target.style.fontSize = '1em' }}
+                    <li><Link onClick={() => { this.setPage('registry') }}
                         className={this.state.registry} to="/registry">Registry</Link></li>
-                    <li><Link onClick={() => { this.setPage('rsvp') }}
+                    {/* <li><Link onClick={() => { this.setPage('rsvp') }}></Link></li> */}
+                    {/* <li><Link onClick={() => { this.setPage('rsvp') }}
                     onTouchStart={(e)=>{e.target.style.fontSize = '1em'}}
                         onMouseOver={(e) => { if(e.type !== 'touchStart'){
                             e.target.style.fontSize = '1.5em' }}}
